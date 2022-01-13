@@ -3,16 +3,16 @@ import './App.css';
 
 function App() {
   const name = '리액트';
-  const style = {
-    backgroundColor: 'black',
-    color: 'aqua',
-    fontSize: '48px',
-    fontWeight: 'bold',
-    padding : 16 // 단위를 생략하면 px로 지정 
-
-  };
-
-  return <div style={style}>{name}</div>
+  /*fsdfa */
+  // wntjr
+  
+  return (
+    <div>
+  <div className='react'>{name}</div>
+  <h1>이상</h1> <h2>이상해</h2>
+  
+  </div>  )
+  
 }
 
 export default App;
