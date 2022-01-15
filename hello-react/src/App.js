@@ -1,9 +1,9 @@
 import React from "./logo.svg";
-import "./App.css";
-import MyComponent from "./MyComponent";
+import Counter from "./Counter";
+
 
 function App() {
-  return <MyComponent name="react" favoriteNumber = {10}>리액트</MyComponent>;
+  return <Counter/>
 }
 
 export default App;
