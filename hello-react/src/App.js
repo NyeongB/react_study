@@ -1,18 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "./logo.svg";
+import "./App.css";
+import MyComponent from "./MyComponent";
 
 function App() {
-  const name = '리액트';
-  /*fsdfa */
-  // wntjr
-  
-  return (
-    <div>
-  <div className='react'>{name}</div>
-  <h1>이상</h1> <h2>이상해</h2>
-  
-  </div>  )
-  
+  return <MyComponent/>
 }
 
 export default App;
