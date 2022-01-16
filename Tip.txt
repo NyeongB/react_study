@@ -1,6 +1,8 @@
+설치 : Node.js, VScode(ESLint, Reactjs Code Snippets, Prettier-Code formatter)
+
 프로젝트 만들기 : npm init react-app hello-react
 
-프로젝트 실행 : npm start
+프로젝트 실행 : npm start  // cd Documents/React_study/hello-react (귀찮..)
 
 rsc : 함수형 컴포넌트
 rcc : 클래스형 컴포넌트
