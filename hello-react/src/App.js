@@ -1,9 +1,9 @@
 import React from "./logo.svg";
-import EventPractice from "./EventPractice";
+import ValidationSample from "./ValidationSample";
 
 
 function App() {
-  return <EventPractice/>
+  return <ValidationSample/>
 };
 
 export default App;
