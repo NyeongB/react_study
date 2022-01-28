@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PhoneForm from './components/PhoneForm';
+import PhoneInfoList from './components/PhoneInfoList';
 // import IterationSample from "./IterationSample";
 
 class App extends Component {
@@ -8,15 +9,15 @@ class App extends Component {
 
 
   state = {
-    informatin: [],
+    information: [],
   }
 
   handleCreate = (data) => {
 
-    const {informatin} = this.state;
+    const {information} = this.state;
 
     this.setState({
-      informatin: informatin.concat(Object.assign({}, data, {
+      information: information.concat(Object.assign({}, data, {
         
         id: this.id++
       })) // 비구조 할당
@@ -29,7 +30,7 @@ class App extends Component {
       <div>
         {/* <IterationSample/> */}
         <PhoneForm onCreate={this.handleCreate}></PhoneForm>
-        {JSON.stringify(this.state.informatin)}
+        <PhoneInfoList data={this.state.information}/>
       </div>
     );
   }
