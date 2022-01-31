@@ -31,6 +31,23 @@ class App extends Component {
     });
   }
 
+  handleUpdate = (id, data) => {
+    const {information} = this.state;
+    this.setState({
+      information: information.map(
+        info =>{
+          if(info.id === id){
+            return {
+              id, 
+              ...data,
+            };
+          }
+          return info;
+        }
+       
+      )
+    })
+  }
 
 
   render() {
@@ -39,8 +56,10 @@ class App extends Component {
         {/* <IterationSample/> */}
         <PhoneForm onCreate={this.handleCreate}></PhoneForm>
         <PhoneInfoList 
-          data={this.state.information}
-          onRemove={this.handleRemove}
+          data = {this.state.information}
+          onRemove = {this.handleRemove}
+          onUpdate = {this.handleUpdate}
+          
           />
       </div>
     );

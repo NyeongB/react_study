@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class PhoneForm extends Component {
 
-    id = 0;
+
 
     state = {
         name: '',
