@@ -18,7 +18,7 @@ mongoose.connect('mongodb+srv://nyeongb:wnwjswk2@cluster0.cza2t.mongodb.net/myFi
     .catch(err => console.log(err))
 
 app.get('/', (req, res) => {
-  res.send('Hello World!~~ 안녕하세요 ~ ')
+  res.send('Hello World!~~ 안녕하세요!!! ')
 })
 
 app.post('/register', (req, res) => {
