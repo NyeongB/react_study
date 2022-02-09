@@ -7,7 +7,7 @@
     "start": "node index.js",
     "backend": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test2": "test2"
+  
   },
   "author": "choi_nyeong",
   "license": "ISC",
