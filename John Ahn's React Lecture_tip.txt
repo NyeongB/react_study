@@ -1,0 +1,14 @@
+scripts 목록에 있는거 실행
+
+"scripts": {
+    "start": "node index.js",
+    "backend": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+  
+  },
+
+
+start : npm start backend
+
+ctrl + c 
+
