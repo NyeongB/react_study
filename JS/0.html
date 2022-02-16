@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    	
+/*
+        let age = 25;
+        let married = false;
+
+        console.log(age);
+        console.log(married);
+
+        // 객체
+        const car = {
+            wheels: 4,
+            color: "red",
+            drive: function() {
+                console.log("wroom wroom");
+            },
+        };
+
+        console.log(car);
+        console.log(Object.keys(car)[0]);
+        console.log(typeof Object.keys(car)[0]);
+        console.log(Object.keys(car)[0]);
+        car.drive();
+
+        // 빈 객체 생성하기
+
+        //const car = new Object();
+        const car = {};
+        car.color = 'red';
+        console.log(car);
+        // 객체의 복사
+        let car = {
+            color: 'red',
+        };
+
+        let secondCar = car;
+
+        console.log('car === secondCar: ')
+        console.log( + car === secondCar);
+
+        secondCar = Object.assign({}, car);
+        
+        console.log('car === secondCar: ')
+        console.log(car === secondCar);
+
+        //배열
+        const fruitBasket = ['apple', 'banana', 'orange'];
+
+        console.log(fruitBasket[0]);
+        console.log(fruitBasket[1]);
+        console.log(fruitBasket[2]);
+
+        console.log(fruitBasket.length);
+
+        fruitBasket.push('pear');
+        console.log(fruitBasket);
+
+        fruitBasket.unshift('melon');
+        console.log(fruitBasket);
+
+        fruitBasket.pop();
+        console.log(fruitBasket);
+
+        fruitBasket.shift();
+        console.log(fruitBasket);
+
+        // 함수
+
+        function greet(name) {
+            console.log("hello " + name);
+        }
+        greet("Alberto");
+
+        let greet2 = (name) => {
+            console.log("hello2 " + name);
+        };
+
+        greet2("Alberto");
+*/
+        // this 키워드
+
+        const myCar = {
+            color: 'red',
+            logColor: function() {
+                console.log(this.color);
+            },
+        };
+
+        myCar.logColor();
+
+    </script>
+    <div id="test">test</div>
+</body>
+</html>
