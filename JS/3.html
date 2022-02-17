@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*
+        function calc(total, tax = 0.1, tip = 0.05) {
+            // txt나 tip에 값을 할당하지 않으면 기본값으로 0.1과 0.05가 쓰인다.
+            return total + (total * tax) + (total * tip);
+        }
+
+
+
+        */
+
+        // destructuring
+        const calc = ({total = 0, tax = 0.1, tip = 0.05,} = {}) => {
+            return total + (total * tax) + (total * tip);
+        }
+        
+        const bill = calc({tip:0.15, total:150,});
+
+        console.log(bill);
+        
+    </script>
+</body>
+</html>
