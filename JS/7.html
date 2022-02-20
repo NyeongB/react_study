@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // for of loop
+        var fruits = ['apple', 'banana', 'orange'];
+
+        for(const fruit of fruits){
+            console.log(fruit);
+        }
+        
+        for(let t in fruits){
+            console.log(t);
+        }
+
+        const car = {
+            maker: "BMW",
+            color: "red",
+            year: "2010",
+        }
+
+        for(const prop of Object.keys(car)) {
+            console.log(prop, car[prop]);
+        }
+    </script>
+</body>
+</html>
