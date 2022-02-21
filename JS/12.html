@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*
+        // 클래스 선언신
+        class Person {
+
+        }
+
+        // 클래스 표현식
+        const person = class Person {
+
+        }    
+
+        class Person {
+            constructor(name, age){
+                this.name = name;
+                this.age = age;
+            }
+
+            // 객체안에 함수 넣는거랑 좀 다르네
+            greet() {
+                console.log(`Hi my name is ${this.name} and my age is ${this.age}`);
+            }
+        }
+
+        const ccn = new Person('ccn',30);
+
+        ccn.greet();
+
+        // 정적 메소드
+        class Person2 {
+            static info() {
+                console.log('Hi nice to meey you');
+            }
+        }
+
+        const person1 = new Person2();
+
+        Person2.info();
+        person1.info();
+        //Uncaught TypeError: person1.info is not a function
+
+        // set, get
+        class Person3 {
+            constructor(name, age){
+                this.name = name;
+                this.age = age;
+                this.nickname = "";
+            }
+
+            set nicknames(value) {
+                this.nickname = value;
+            }
+
+            get nicknames() {
+                console.log(`Your nickname is ${this.nickname}`);
+            }
+        }
+
+        const person2 = new Person3('choi',30);
+
+        person2.nicknames; // blank
+
+        person2.nicknames = 'ccn';
+
+        person2.nicknames;
+        */
+
+        // 상속
+        class Person {
+            constructor(name, age){
+                this.name = name;
+                this.age = age;
+            }
+
+            // 객체안에 함수 넣는거랑 좀 다르네
+            greet() {
+                console.log(`Hi my name is ${this.name} and my age is ${this.age}`);
+            }
+        }
+
+        class Adult extends Person {
+            constructor(name, age, work){
+                super(name, age);
+                this.work = work;
+            }
+        }
+
+        const ccn = new Adult('choi', 30, 'backend');
+
+        ccn.greet();
+
+        console.log(ccn.work);
+
+    </script>
+</body>
+</html>
