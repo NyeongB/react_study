@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    /*
+    // Promise
+        const myPromise = new Promise((resolve, reject) => {
+            resolve("The value we get from the promise");
+        });
+
+        myPromise.then(
+            data => {
+                console.log(data);
+            }
+        );
+    const myPromise = new Promise((resolve, reject) => {
+        setTimeout(()=>{
+            resolve("The value we get from the promise");
+        }, 2000);
+    });
+
+    myPromise.then((data)=> {
+        console.log(data);
+    });    
+
+    const myPromise = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            reject(new Error('this is our error'));
+        },2000);
+    });
+
+    myPromise.then((data)=> {
+            console.log(data);
+        }
+    ).catch((err)=>{
+        console.log(err)
+    });
+    
+    */
+
+    // 프로미스 체이닝
+    
+    const myPromise = new Promise((resolve, reject)=>{
+        resolve();
+    });
+
+    myPromise
+        .then(data=>{
+            return 'working...';
+
+    }).then(data=>{
+        console.log(data);
+        throw 'failed!';
+    }).catch(err=>{
+        console.log(err);
+    });
+    
+    
+
+    </script>
+    
+</body>
+</html>
