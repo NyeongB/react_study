@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function* fruitList() {
+            yield 'Banana';
+            yield 'Apple';
+            yield 'Orange';
+        }
+
+        const fruit = fruitList();
+
+        // Generator
+        
+        console.log(fruit.next());
+        //{value: 'Banana', done: false}
+
+        console.log(fruit.next());
+        //{value: 'Apple', done: false}
+
+        console.log(fruit.next());
+        //{value: 'Orange', done: false}
+
+        console.log(fruit.next());
+        //{value: undefined, done: true}
+
+        const list = ['Banana', 'Apple', 'Orange', 'Melon', 'Cherry', 'Mango'];
+
+        function* loop(arr) {
+            for (const item of arr) {
+                yield `I Like to eat ${item}s`;
+            }
+        }
+
+        const fruitGenerator = loop(list);
+
+        console.log(fruitGenerator.next().value);
+        console.log(fruitGenerator.next().value);
+        console.log(fruitGenerator.next().value);
+        console.log(fruitGenerator.next().value);
+        console.log(fruitGenerator.next().value);
+        console.log(fruitGenerator.next().value);
+
+        const test = loop(list);
+
+        // return 사용하여 제너레이터 종료하기
+        console.log(test.return());
+
+        // .throw()로 오류 잡기
+
+        function* gen() {
+            try {
+                yield 'Trying...';
+                yield 'Trying harder...';
+                yield 'Trying even harder...';
+            }
+            catch(err) {
+                console.log('Error: ' + err);
+            }
+        }
+
+        const myGen = gen();
+
+        console.log(myGen.next());
+
+        console.log(myGen.next());
+
+        console.log(myGen.throw('ooppss')); // yeild가 남아있는데도 종료됨
+
+    </script>
+</body>
+</html>
