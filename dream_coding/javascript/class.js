@@ -65,3 +65,33 @@ class Article {
 const article1 = new Article('ccn');
 console.log(Article.publisher)
 console.log(article1.publisher)
+
+// Inheritance
+
+class Shape {
+    constructor(width, height, color) {
+        this.width = width;
+        this.height = height;
+        this.color = color;
+    }
+
+    draw() {
+        console.log(`darwing ${this.color} color of`);
+    }
+
+    getArea() {
+        return width * this.height;
+    }
+}
+
+class Rectangle extends Shape {}
+class Triangle extends Shape {
+    getArea() {
+        return (this.width * this.height) / 2;
+    }
+}
+
+
+const triangle = new Triangle(20,20,'red');
+const rectangle = new Rectangle(20, 20, 'blue');
+rectangle.draw();
