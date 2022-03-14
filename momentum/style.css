@@ -1,15 +1,3 @@
-body {
-    background-color: beige;
-}
-
-.font {
-    font-style: italic;
-}
-
-h1 {
-    color: aquamarine;
-}
-
-.clicked {
-    color: tomato;
+.hidden {
+    display: none;
 }
