@@ -21,7 +21,7 @@ body {
 .controls {
     margin-top: 80px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /*정렬기준*/
     align-items: center;
 }
 
@@ -45,20 +45,20 @@ body {
 }
 
 .controls_btns button:active{
-    transform: scale(0.98);
+    transform: scale(0.98); /*버튼 눌렀을때 잠깐 작아지게*/
 }
 
 
 .controls .controls_colors {
-    display: flex;
+    display: flex; /*눕히기*/
 }
 
 
 .controls_colors .controls_color {
     width:50px;
     height: 50px;
-    border-radius: 24px;
-    cursor: pointer;
+    border-radius: 24px; /*동그라미 만듬*/
+    cursor: pointer; /*위에 올릴때 손모양*/
     box-shadow: 0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%);
 }
 
