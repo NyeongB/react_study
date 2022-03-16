@@ -11,8 +11,8 @@ function getClock(){
     
 }
 
-getClock();
-setInterval(getClock, 1000);
+getClock(); // 시작하자마자 시간표시
+setInterval(getClock, 1000); // 그 이후로는 1초마다 시간 받아와서 표시
 
 //setInterval(sayHello, 5000); // 인자 두개: 실행할 함수, ms 반복 O
 // setTimeout(sayHello, 5000); // 인자 두개: 실행할 함수, ms 반복 X
