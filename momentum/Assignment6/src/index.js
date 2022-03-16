@@ -12,10 +12,10 @@ function getClock() {
   const date_xmas = new Date(`December 25, ${date_now.getFullYear()} 00:00:00`);
 
   const result = date_xmas - date_now;
-  const day = Math.floor(result / DAY);
-  const hour = Math.floor((result / HOUR) % 24);
-  const min = Math.floor((result / MIN) % 60);
-  const sec = Math.floor((result / SEC) % 60);
+  const day = String(Math.floor(result / DAY)).padStart(3, "0");
+  const hour = String(Math.floor((result / HOUR) % 24)).padStart(2, "0");
+  const min = String(Math.floor((result / MIN) % 60)).padStart(2, "0");
+  const sec = String(Math.floor((result / SEC) % 60)).padStart(2, "0");
 
   clockTitle.innerText = `${day}d ${hour}h ${min}m ${sec}s`;
 }
