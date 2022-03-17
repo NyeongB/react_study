@@ -14,8 +14,10 @@ canvas.width = document.getElementsByClassName("canvas")[0].offsetWidth;
 canvas.height = document.getElementsByClassName("canvas")[0].offsetHeight;
 
 ctx.strokeStyle = "#2c2c2c";
+ctx.fillStyle = "#2c2c2c";
 ctx.lineWidth = 2.5;
 
+ctx.fillRect(80, 100, 100, 49);
 
 let painting = false;
 let filling = false;
@@ -51,6 +53,7 @@ function handleColorClick(event) {
     
     const color = event.target.style.backgroundColor;
     ctx.strokeStyle = color;
+    ctx.fillStyle = color;
     
 }
 
@@ -68,7 +71,15 @@ function handleModeClick() {
     } else {
         filling = true;
         mode.innerText = "Paint";
+        
     }
+}
+
+function handleCanvasClick() {
+    if(filling){
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
+    
 }
 
 
@@ -77,6 +88,7 @@ if(canvas) {
     canvas.addEventListener("mousedown", startPainting);
     canvas.addEventListener("mouseup", stopPaingting);
     canvas.addEventListener("mouseleave", stopPaingting);
+    canvas.addEventListener("click", handleCanvasClick);
 }
 
 if(colors) {
