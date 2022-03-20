@@ -7,20 +7,34 @@ const loginInput = document.querySelector("#login_form input");
 const message = document.querySelector("#message");
 
 const HIDDEN = "hidden";
+const USERNAME_KEY = "username";
 
 function onClickSubmit(event) {
     event.preventDefault();
 
-    const text = loginInput.value;
-
     login_form.classList.add(HIDDEN);
 
-    message.classList.remove(HIDDEN);
+    const text = loginInput.value;
 
+    localStorage.setItem(USERNAME_KEY, text);
+    
     message.innerHTML = `Hello ${text}`;
 
+    message.classList.remove(HIDDEN);
     
 }
 
 
-login_form.addEventListener("submit", onClickSubmit);
+
+
+const saveUserName = localStorage.getItem(USERNAME_KEY);
+
+if(saveUserName === null) {
+    login_form.classList.remove(HIDDEN);
+    login_form.addEventListener("submit", onClickSubmit);
+} else {
+    message.innerHTML = `Hello ${saveUserName}`;
+    message.classList.remove(HIDDEN);
+    login_form.classList.add(HIDDEN);
+    
+}
