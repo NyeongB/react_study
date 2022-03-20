@@ -1,3 +1,49 @@
 .hidden {
     display: none;
 }
+
+#clock {
+    text-align: center;
+    font-size: 50px;
+}
+#weather {
+    text-align: right;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+#message{
+    text-align: center;
+}
+
+#login_form{
+    text-align: center;
+}
+
+#todo-form {
+    text-align: center;
+}
+
+#todo-form input {
+    width:300px;
+    height:50px;
+    font-size:20px;
+      
+}
+
+#todo-list {
+    text-align: center;
+    list-style:none;
+}
+
+#todo-list span:first-child{
+    font-size:30px;
+    margin-right: 20px;
+}
+
+
+
+#quote{
+    
+    text-align: center;
+}

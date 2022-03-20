@@ -11,8 +11,11 @@ console.log(chosenImage);
 
 const bgImage = document.createElement("img");
 
-bgImage.src = `img/${chosenImage}`;
+//bgImage.src = `img/${chosenImage}`;
 
-console.log(bgImage);
+//document.body.append(bgImage);
 
-document.body.appendChild(bgImage);
+document.body.style.backgroundImage = `url("img/${chosenImage}")`;
+
+
+
