@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Como1 from './components/Como1'
 import './App.css'
+import Clock from "./components/Clock";
 export default class App extends Component {
   state = {
     number: 0,
@@ -29,6 +30,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="whole">
+        <Clock></Clock>
         <Como1 number={this.state.number}></Como1>
         <div className="button">
           <button onClick={this.handleClick}>gen number</button>
