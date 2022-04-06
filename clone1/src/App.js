@@ -39,9 +39,16 @@ export default class App extends Component {
             }
         }
         lotto.sort((a,b)=>a-b);
-    this.setState({
-      lotto: this.state.lotto.concat(lotto),
-    })
+    if(this.state.lotto === []){
+      this.setState({
+        lotto: this.state.lotto.concat(lotto),
+      })
+    } else{
+      this.setState({
+        lotto: [].concat(lotto),
+      })
+    }
+    
   }
 
   render() {
