@@ -1,4 +1,5 @@
 import React from 'react';
+import './Como1.css'
 
 const como1 = props => {
 
@@ -7,6 +8,14 @@ const como1 = props => {
         <div>
             <h1>Random Number Generator</h1>
             <h2>{props.number}</h2>
+            <h2>{props.lotto}</h2>
+            <div>
+                {props.lotto.map( (i) => {
+                return (
+                    <div className='ball ball1'>{i}</div>
+                    );
+                })}
+            </div>
         </div>
     );
 };
