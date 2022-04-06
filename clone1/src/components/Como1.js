@@ -10,9 +10,9 @@ const como1 = props => {
             <h2>{props.number}</h2>
             <h2>{props.lotto}</h2>
             <div>
-                {props.lotto.map( (i) => {
+                {props.lotto.map( (i,idx) => {
                 return (
-                    <div className='ball ball1'>{i}</div>
+                    <div className={`ball ball${idx+1}`}>{i}</div>
                     );
                 })}
             </div>
